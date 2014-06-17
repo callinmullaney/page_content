@@ -50,8 +50,8 @@ function page_content_field_group_info() {
     'label' => 'Main Content',
     'weight' => '0',
     'children' => array(
-      0 => 'body',
-      1 => 'title',
+      0 => 'title',
+      1 => 'field_page_body',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

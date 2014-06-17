@@ -28,12 +28,12 @@ function page_content_views_api($module = NULL, $api = NULL) {
  */
 function page_content_eck_bundle_info() {
   $items = array(
-  'sidebar_content_static_content' => array(
-  'machine_name' => 'sidebar_content_static_content',
-  'entity_type' => 'sidebar_content',
-  'name' => 'static_content',
-  'label' => 'Static Content',
-),
+    'sidebar_content_static_content' => array(
+      'machine_name' => 'sidebar_content_static_content',
+      'entity_type' => 'sidebar_content',
+      'name' => 'static_content',
+      'label' => 'Static Content',
+    ),
   );
   return $items;
 }
@@ -42,23 +42,23 @@ function page_content_eck_bundle_info() {
  * Implements hook_eck_entity_type_info().
  */
 function page_content_eck_entity_type_info() {
-$items = array(
-       'sidebar_content' => array(
-  'name' => 'sidebar_content',
-  'label' => 'Sidebar Content',
-  'properties' => array(
-    'title' => array(
-      'label' => 'Title',
-      'type' => 'text',
-      'behavior' => 'title',
+  $items = array(
+    'sidebar_content' => array(
+      'name' => 'sidebar_content',
+      'label' => 'Sidebar Content',
+      'properties' => array(
+        'title' => array(
+          'label' => 'Title',
+          'type' => 'text',
+          'behavior' => 'title',
+        ),
+        'created' => array(
+          'label' => 'Created',
+          'type' => 'integer',
+          'behavior' => 'created',
+        ),
+      ),
     ),
-    'created' => array(
-      'label' => 'Created',
-      'type' => 'integer',
-      'behavior' => 'created',
-    ),
-  ),
-),
   );
   return $items;
 }
