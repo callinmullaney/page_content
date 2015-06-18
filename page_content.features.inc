@@ -5,6 +5,42 @@
  */
 
 /**
+ * Implements hook_default_asset_type().
+ */
+function page_content_default_asset_type() {
+  $items = array();
+  $items['downloadable'] = entity_import('asset_type', '{
+    "type" : "downloadable",
+    "name" : "Downloadable",
+    "plural" : "Downloadables",
+    "data" : {
+      "path" : "admin\\/media\\/downloadable",
+      "instance_info" : 1,
+      "icon" : "download",
+      "widget" : { "assetWidgetCaption" : { "status" : 1 } }
+    },
+    "rdf_mapping" : [],
+    "public" : true
+  }');
+  $items['image'] = entity_import('asset_type', '{
+    "type" : "image",
+    "name" : "Image",
+    "plural" : "Images",
+    "data" : {
+      "path" : "admin\\/media\\/image",
+      "icon" : "photo",
+      "widget" : {
+        "assetWidgetLink" : { "status" : 1 },
+        "assetWidgetCaption" : { "status" : 1 }
+      }
+    },
+    "rdf_mapping" : [],
+    "public" : true
+  }');
+  return $items;
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function page_content_ctools_plugin_api($module = NULL, $api = NULL) {
@@ -24,46 +60,6 @@ function page_content_views_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_eck_bundle_info().
- */
-function page_content_eck_bundle_info() {
-  $items = array(
-    'sidebar_content_static_content' => array(
-      'machine_name' => 'sidebar_content_static_content',
-      'entity_type' => 'sidebar_content',
-      'name' => 'static_content',
-      'label' => 'Static Content',
-    ),
-  );
-  return $items;
-}
-
-/**
- * Implements hook_eck_entity_type_info().
- */
-function page_content_eck_entity_type_info() {
-  $items = array(
-    'sidebar_content' => array(
-      'name' => 'sidebar_content',
-      'label' => 'Sidebar Content',
-      'properties' => array(
-        'title' => array(
-          'label' => 'Title',
-          'type' => 'text',
-          'behavior' => 'title',
-        ),
-        'created' => array(
-          'label' => 'Created',
-          'type' => 'integer',
-          'behavior' => 'created',
-        ),
-      ),
-    ),
-  );
-  return $items;
-}
-
-/**
  * Implements hook_node_info().
  */
 function page_content_node_info() {
@@ -71,11 +67,12 @@ function page_content_node_info() {
     'page' => array(
       'name' => t('Page'),
       'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
