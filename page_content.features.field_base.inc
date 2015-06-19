@@ -123,6 +123,42 @@ function page_content_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_meta_description'
+  $field_bases['field_meta_description'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_meta_description',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'metatags_quick',
+    'settings' => array(
+      'max_length' => 255,
+      'meta_name' => 'meta_description',
+    ),
+    'translatable' => 0,
+    'type' => 'metatags_quick',
+  );
+
+  // Exported field_base: 'field_meta_keywords'
+  $field_bases['field_meta_keywords'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_meta_keywords',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'metatags_quick',
+    'settings' => array(
+      'max_length' => 255,
+      'meta_name' => 'meta_keywords',
+    ),
+    'translatable' => 0,
+    'type' => 'metatags_quick',
+  );
+
   // Exported field_base: 'field_photo_gallery'
   $field_bases['field_photo_gallery'] = array(
     'active' => 1,
@@ -161,16 +197,36 @@ function page_content_field_default_field_bases() {
   // Exported field_base: 'field_video'
   $field_bases['field_video'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_video',
-    'indexes' => array(),
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'video_embed_field',
-    'settings' => array(),
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'video' => 'video',
+        ),
+      ),
+      'target_type' => 'asset',
+    ),
     'translatable' => 0,
-    'type' => 'video_embed_field',
+    'type' => 'entityreference',
   );
 
   return $field_bases;

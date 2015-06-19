@@ -22,13 +22,13 @@ function page_content_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'redirect' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'xmlsitemap' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
       ),
       'display' => array(),
