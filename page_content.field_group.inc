@@ -23,8 +23,8 @@ function page_content_field_group_info() {
     'label' => 'Attachments',
     'weight' => '2',
     'children' => array(
-      0 => 'field_file',
-      1 => 'field_video',
+      0 => 'field_file_asset',
+      1 => 'field_video_asset',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -108,7 +108,7 @@ function page_content_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Meta Tags',
-    'weight' => '99',
+    'weight' => '100',
     'children' => array(
       0 => 'field_meta_description',
       1 => 'field_meta_keywords',
