@@ -9,18 +9,13 @@
  */
 function page_content_default_asset_type() {
   $items = array();
-  $items['downloadable'] = entity_import('asset_type', '{
-    "type" : "downloadable",
-    "name" : "Downloadable",
-    "plural" : "Downloadables",
-    "data" : {
-      "path" : "admin\\/media\\/downloadable",
-      "instance_info" : 1,
-      "icon" : "download",
-      "widget" : { "assetWidgetCaption" : { "status" : 1 } }
-    },
+  $items['file'] = entity_import('asset_type', '{
+    "type" : "file",
+    "name" : "File",
+    "plural" : "Files",
+    "data" : { "path" : "admin\\/media\\/files", "usage_info" : 1, "icon" : "file" },
     "rdf_mapping" : [],
-    "public" : true
+    "public" : false
   }');
   $items['image'] = entity_import('asset_type', '{
     "type" : "image",
@@ -36,6 +31,14 @@ function page_content_default_asset_type() {
     },
     "rdf_mapping" : [],
     "public" : true
+  }');
+  $items['video'] = entity_import('asset_type', '{
+    "type" : "video",
+    "name" : "Video",
+    "plural" : "Videos",
+    "data" : { "path" : "admin\\/media\\/videos", "icon" : "video-camera" },
+    "rdf_mapping" : [],
+    "public" : false
   }');
   return $items;
 }

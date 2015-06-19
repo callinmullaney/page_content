@@ -23,7 +23,8 @@ function page_content_field_group_info() {
     'label' => 'Attachments',
     'weight' => '2',
     'children' => array(
-      0 => 'field_downloads',
+      0 => 'field_file',
+      1 => 'field_video',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
