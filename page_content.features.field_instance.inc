@@ -46,6 +46,62 @@ function page_content_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'asset-image-field_caption'
+  $field_instances['asset-image-field_caption'] = array(
+    'bundle' => 'image',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'asset',
+    'field_name' => 'field_caption',
+    'label' => 'Caption',
+    'required' => 0,
+    'settings' => array(
+      'asset' => array(
+        'default' => 1,
+        'status' => 0,
+      ),
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'asset-image-field_image'
   $field_instances['asset-image-field_image'] = array(
     'bundle' => 'image',
@@ -86,7 +142,7 @@ function page_content_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -471,6 +527,7 @@ function page_content_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Caption');
   t('Featured Image');
   t('File');
   t('Image');

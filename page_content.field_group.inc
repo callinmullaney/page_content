@@ -25,6 +25,7 @@ function page_content_field_group_info() {
     'children' => array(
       0 => 'field_file_asset',
       1 => 'field_video_asset',
+      2 => 'field_faq',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
