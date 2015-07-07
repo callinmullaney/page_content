@@ -23,9 +23,9 @@ function page_content_field_group_info() {
     'label' => 'Attachments',
     'weight' => '2',
     'children' => array(
-      0 => 'field_file_asset',
-      1 => 'field_video_asset',
-      2 => 'field_faq',
+      0 => 'field_video_asset',
+      1 => 'field_file_assets',
+      2 => 'field_video_assets',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -82,8 +82,8 @@ function page_content_field_group_info() {
     'label' => 'Imagery',
     'weight' => '1',
     'children' => array(
-      0 => 'field_featured_image',
-      1 => 'field_photo_gallery',
+      0 => 'field_slide_assets',
+      1 => 'field_image_assets',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

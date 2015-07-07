@@ -50,41 +50,6 @@ function page_content_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_featured_image'
-  $field_bases['field_featured_image'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_featured_image',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'slide' => 'slide',
-        ),
-      ),
-      'target_type' => 'asset',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_file'
   $field_bases['field_file'] = array(
     'active' => 1,
@@ -108,13 +73,13 @@ function page_content_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_file_asset'
-  $field_bases['field_file_asset'] = array(
+  // Exported field_base: 'field_file_assets'
+  $field_bases['field_file_assets'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_file_asset',
+    'field_name' => 'field_file_assets',
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -165,13 +130,48 @@ function page_content_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image_ref'
-  $field_bases['field_image_ref'] = array(
+  // Exported field_base: 'field_image_asset'
+  $field_bases['field_image_asset'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_image_ref',
+    'field_name' => 'field_image_asset',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'image' => 'image',
+        ),
+      ),
+      'target_type' => 'asset',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_image_assets'
+  $field_bases['field_image_assets'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_image_assets',
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -236,13 +236,13 @@ function page_content_field_default_field_bases() {
     'type' => 'metatags_quick',
   );
 
-  // Exported field_base: 'field_photo_gallery'
-  $field_bases['field_photo_gallery'] = array(
+  // Exported field_base: 'field_slide_assets'
+  $field_bases['field_slide_assets'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_photo_gallery',
+    'field_name' => 'field_slide_assets',
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -262,7 +262,7 @@ function page_content_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'image' => 'image',
+          'slide' => 'slide',
         ),
       ),
       'target_type' => 'asset',
@@ -315,13 +315,13 @@ function page_content_field_default_field_bases() {
     'type' => 'video_embed_field',
   );
 
-  // Exported field_base: 'field_video_asset'
-  $field_bases['field_video_asset'] = array(
+  // Exported field_base: 'field_video_assets'
+  $field_bases['field_video_assets'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_video_asset',
+    'field_name' => 'field_video_assets',
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
