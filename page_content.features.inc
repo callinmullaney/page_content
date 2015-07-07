@@ -32,6 +32,18 @@ function page_content_default_asset_type() {
     "rdf_mapping" : [],
     "public" : true
   }');
+  $items['slide'] = entity_import('asset_type', '{
+    "type" : "slide",
+    "name" : "Slide",
+    "plural" : "Slides",
+    "data" : {
+      "path" : "admin\\/manage\\/slides",
+      "auto_title" : 1,
+      "icon" : "file-picture-o"
+    },
+    "rdf_mapping" : [],
+    "public" : false
+  }');
   $items['video'] = entity_import('asset_type', '{
     "type" : "video",
     "name" : "Video",
