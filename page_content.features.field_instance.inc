@@ -109,63 +109,6 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-slide-field_caption'
-  $field_instances['asset-slide-field_caption'] = array(
-    'bundle' => 'slide',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'asset',
-    'field_name' => 'field_caption',
-    'label' => 'Caption',
-    'required' => 0,
-    'settings' => array(
-      'asset' => array(
-        'default' => 1,
-        'status' => 0,
-      ),
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'full_html' => array(
-              'weight' => 1,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-        'show_token_tree' => 0,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'asset-slide-field_image_asset'
   $field_instances['asset-slide-field_image_asset'] = array(
     'bundle' => 'slide',
@@ -206,12 +149,12 @@ function page_content_field_default_field_instances() {
         ),
       ),
       'type' => 'inline_entity_form',
-      'weight' => 1,
+      'weight' => 0,
     ),
   );
 
-  // Exported field_instance: 'asset-slide-field_slide_link'
-  $field_instances['asset-slide-field_slide_link'] = array(
+  // Exported field_instance: 'asset-slide-field_link'
+  $field_instances['asset-slide-field_link'] = array(
     'bundle' => 'slide',
     'default_value' => NULL,
     'deleted' => 0,
@@ -222,11 +165,11 @@ function page_content_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'asset',
-    'field_name' => 'field_slide_link',
+    'field_name' => 'field_link',
     'label' => 'Link',
     'required' => 0,
     'settings' => array(
@@ -235,7 +178,7 @@ function page_content_field_default_field_instances() {
         'class' => '',
         'configurable_class' => 0,
         'configurable_title' => 0,
-        'rel' => '',
+        'rel' => 'nofollow',
         'target' => 'default',
         'title' => '',
       ),
@@ -243,7 +186,7 @@ function page_content_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
-      'rel_remove' => 'default',
+      'rel_remove' => 'rel_remove_internal',
       'title' => 'optional',
       'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
@@ -257,7 +200,45 @@ function page_content_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 3,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'asset-slide-field_textarea'
+  $field_instances['asset-slide-field_textarea'] = array(
+    'bundle' => 'slide',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'asset',
+    'field_name' => 'field_textarea',
+    'label' => 'Caption',
+    'required' => 0,
+    'settings' => array(
+      'asset' => array(
+        'default' => 1,
+        'status' => 0,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
     ),
   );
 
