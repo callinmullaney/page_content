@@ -438,6 +438,7 @@ function page_content_field_default_field_instances() {
         'type_settings' => array(
           'allow_existing' => 1,
           'allow_new' => 1,
+          'auto_title' => 0,
           'delete_references' => 0,
           'instance_default_creation' => 0,
           'label_plural' => 'Images',
