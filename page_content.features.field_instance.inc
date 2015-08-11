@@ -235,7 +235,7 @@ function page_content_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 2,
       ),
       'type' => 'text_textarea',
       'weight' => 1,
@@ -314,7 +314,7 @@ function page_content_field_default_field_instances() {
     'settings' => array(
       'asset' => array(
         'default' => 1,
-        'status' => 0,
+        'status' => 1,
       ),
       'better_formats' => array(
         'allowed_formats' => array(
@@ -334,7 +334,11 @@ function page_content_field_default_field_instances() {
           ),
         ),
       ),
-      'display_summary' => 1,
+      'display_summary' => 0,
+      'exo' => array(
+        'default' => 1,
+        'status' => 1,
+      ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -343,7 +347,6 @@ function page_content_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
-        'show_token_tree' => FALSE,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -563,10 +566,11 @@ function page_content_field_default_field_instances() {
         'type_settings' => array(
           'allow_existing' => 1,
           'allow_new' => 1,
+          'auto_title' => 0,
           'delete_references' => 0,
           'instance_default_creation' => 0,
-          'label_plural' => 'Slides',
-          'label_singular' => 'Slide',
+          'label_plural' => 'slides',
+          'label_singular' => 'slide',
           'match_operator' => 'CONTAINS',
           'override_labels' => 1,
         ),
