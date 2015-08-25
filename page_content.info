@@ -1,8 +1,8 @@
 name = Page Content
-description = Creates a page content type with the ability to add/manage sidebar content on a per-node basis
+description = Creates a page content type with supporting asset types.
 core = 7.x
 package = Content
-version = 7.x-1.7
+version = 7.x-1.8
 project = page_content
 dependencies[] = asset
 dependencies[] = ctools

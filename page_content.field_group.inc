@@ -26,15 +26,14 @@ function page_content_field_group_info() {
       0 => 'field_file_assets',
       1 => 'field_video_assets',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Attachments',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => '',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'collapsed',
     ),
   );
   $export['group_attachments|node|dvsdvswv|form'] = $field_group;
@@ -55,15 +54,14 @@ function page_content_field_group_info() {
       0 => 'body',
       1 => 'title',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Page Content',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => '',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'collapsible',
     ),
   );
   $export['group_content|node|dvsdvswv|form'] = $field_group;
@@ -84,15 +82,14 @@ function page_content_field_group_info() {
       0 => 'field_image_assets',
       1 => 'field_slide_assets',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'tab',
     'format_settings' => array(
-      'label' => 'Imagery',
+      'formatter' => 'closed',
       'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => '',
         'description' => '',
+        'classes' => '',
+        'required_fields' => 1,
       ),
-      'formatter' => 'collapsed',
     ),
   );
   $export['group_imagery|node|dvsdvswv|form'] = $field_group;

@@ -11,59 +11,97 @@ function page_content_default_asset_type() {
   $items = array();
   $items['file'] = entity_import('asset_type', '{
     "type" : "file",
-    "name" : "File",
+    "title" : "Files",
     "plural" : "Files",
-    "data" : { "path" : "admin\\/media\\/files", "usage_info" : 1, "icon" : "file" },
+    "data" : {
+      "icon" : "file-o",
+      "path" : "admin\\/media\\/files",
+      "usage_info" : 1,
+      "auto_title" : 0,
+      "auto_title_pattern" : "",
+      "render_title" : 0,
+      "allow_status" : 0,
+      "instance_info" : 0,
+      "purge" : 0,
+      "no_multiple" : 0,
+      "require_instance" : 0
+    },
     "rdf_mapping" : [],
     "public" : false
   }');
   $items['image'] = entity_import('asset_type', '{
     "type" : "image",
-    "name" : "Image",
+    "title" : "Image",
     "plural" : "Images",
     "data" : {
+      "icon" : "photo",
       "path" : "admin\\/media\\/image",
+      "auto_title" : 1,
       "usage_info" : 1,
       "instance_info" : 1,
-      "icon" : "photo",
       "widget" : {
+        "assetWidgetPosition" : { "status" : 1 },
         "assetWidgetImageStyle" : {
           "status" : 1,
           "settings" : {
-            "content_full" : "Full",
-            "content_medium" : "Medium",
-            "content_small" : "Small"
+            "exo_full" : "Full Width",
+            "exo_half" : "Half Width",
+            "exo_one_quarter" : "One Quarter Width",
+            "exo_one_third" : "One Third Width",
+            "exo_three_quarter" : "Three Quarter Width",
+            "exo_two_third" : "Two Third Width"
           }
         },
-        "assetWidgetPosition" : { "status" : 1 },
         "assetWidgetCaption" : { "status" : 1 },
         "assetWidgetLink" : { "status" : 1 }
-      }
+      },
+      "auto_title_pattern" : "",
+      "render_title" : 0,
+      "allow_status" : 0,
+      "purge" : 0,
+      "no_multiple" : 0,
+      "require_instance" : 0
     },
     "rdf_mapping" : [],
     "public" : true
   }');
   $items['slide'] = entity_import('asset_type', '{
     "type" : "slide",
-    "name" : "Slide",
+    "title" : "Slide",
     "plural" : "Slides",
     "data" : {
+      "icon" : "file-photo-o",
       "path" : "admin\\/manage\\/slides",
       "usage_info" : 1,
-      "icon" : "file-picture-o"
+      "auto_title" : 0,
+      "auto_title_pattern" : "",
+      "render_title" : 0,
+      "allow_status" : 0,
+      "instance_info" : 0,
+      "purge" : 0,
+      "no_multiple" : 0,
+      "require_instance" : 0
     },
     "rdf_mapping" : [],
     "public" : false
   }');
   $items['video'] = entity_import('asset_type', '{
     "type" : "video",
-    "name" : "Video",
+    "title" : "Video",
     "plural" : "Videos",
     "data" : {
+      "icon" : "video-camera",
       "path" : "admin\\/media\\/videos",
       "usage_info" : 1,
-      "icon" : "video-camera",
-      "widget" : { "assetWidgetPlaceholder" : { "status" : 1 } }
+      "widget" : { "assetWidgetPlaceholder" : { "status" : 1 } },
+      "auto_title" : 0,
+      "auto_title_pattern" : "",
+      "render_title" : 0,
+      "allow_status" : 0,
+      "instance_info" : 0,
+      "purge" : 0,
+      "no_multiple" : 0,
+      "require_instance" : 0
     },
     "rdf_mapping" : [],
     "public" : false
