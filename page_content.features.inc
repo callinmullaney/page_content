@@ -14,9 +14,10 @@ function page_content_default_asset_type() {
     "title" : "Files",
     "plural" : "Files",
     "data" : {
-      "icon" : "file-o",
+      "icon" : "file",
       "path" : "admin\\/media\\/files",
       "usage_info" : 1,
+      "title_label" : "",
       "auto_title" : 0,
       "auto_title_pattern" : "",
       "render_title" : 0,
@@ -60,7 +61,8 @@ function page_content_default_asset_type() {
       "allow_status" : 0,
       "purge" : 0,
       "no_multiple" : 0,
-      "require_instance" : 0
+      "require_instance" : 0,
+      "title_label" : ""
     },
     "rdf_mapping" : [],
     "public" : true
@@ -80,7 +82,8 @@ function page_content_default_asset_type() {
       "instance_info" : 0,
       "purge" : 0,
       "no_multiple" : 0,
-      "require_instance" : 0
+      "require_instance" : 0,
+      "title_label" : ""
     },
     "rdf_mapping" : [],
     "public" : false
@@ -101,7 +104,8 @@ function page_content_default_asset_type() {
       "instance_info" : 0,
       "purge" : 0,
       "no_multiple" : 0,
-      "require_instance" : 0
+      "require_instance" : 0,
+      "title_label" : ""
     },
     "rdf_mapping" : [],
     "public" : false

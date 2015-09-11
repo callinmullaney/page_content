@@ -31,7 +31,26 @@ function page_content_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => '',
-      'file_extensions' => 'txt pdf rtf doc docx vcf zip',
+      'file_extensions' => 'txt doc docx pdf xls xlsx zip ppt pptx',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 1,
+            'transliterate' => 1,
+          ),
+          'value' => '[asset:id]-[file:fid]-[asset:title].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 1,
+            'transliterate' => 1,
+          ),
+          'value' => 'files/[file:ffp-extension-original]',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -76,17 +95,17 @@ function page_content_field_default_field_instances() {
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
+            'pathauto' => 1,
+            'transliterate' => 1,
           ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          'value' => '[asset:id]-[file:fid]-[asset:title].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
             'pathauto' => 0,
             'transliterate' => 0,
           ),
-          'value' => '',
+          'value' => 'images',
         ),
         'retroactive_update' => 0,
       ),
