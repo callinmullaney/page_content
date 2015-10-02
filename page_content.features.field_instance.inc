@@ -17,10 +17,13 @@ function page_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
+        'label' => 'hidden',
+        'module' => 'asset',
+        'settings' => array(
+          'show_download' => TRUE,
+          'show_title' => TRUE,
+        ),
+        'type' => 'asset_file_icon',
         'weight' => 0,
       ),
     ),
@@ -29,7 +32,7 @@ function page_content_field_default_field_instances() {
     'label' => 'File',
     'required' => 1,
     'settings' => array(
-      'description_field' => 1,
+      'description_field' => 0,
       'file_directory' => '',
       'file_extensions' => 'txt doc docx pdf xls xlsx zip ppt pptx',
       'filefield_paths' => array(
@@ -72,7 +75,7 @@ function page_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -269,7 +272,7 @@ function page_content_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'video_embed_field',
         'settings' => array(
           'description' => 1,
@@ -289,7 +292,7 @@ function page_content_field_default_field_instances() {
         'vimeo' => 'vimeo',
         'youtube' => 'youtube',
       ),
-      'description_field' => 1,
+      'description_field' => 0,
       'description_length' => 128,
       'user_register_form' => FALSE,
     ),

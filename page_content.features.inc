@@ -41,28 +41,25 @@ function page_content_default_asset_type() {
       "usage_info" : 1,
       "instance_info" : 1,
       "widget" : {
-        "assetWidgetPosition" : { "status" : 1 },
         "assetWidgetImageStyle" : {
           "status" : 1,
           "settings" : {
-            "exo_full" : "Full Width",
-            "exo_half" : "Half Width",
-            "exo_one_quarter" : "One Quarter Width",
-            "exo_one_third" : "One Third Width",
-            "exo_three_quarter" : "Three Quarter Width",
-            "exo_two_third" : "Two Third Width"
+            "content_full" : "Full Width",
+            "content_half" : "Half Width",
+            "content_quarter" : "Quarter Width"
           }
         },
-        "assetWidgetCaption" : { "status" : 1 },
-        "assetWidgetLink" : { "status" : 1 }
+        "assetWidgetPosition" : { "status" : 1 },
+        "assetWidgetLink" : { "status" : 1 },
+        "assetWidgetCaption" : { "status" : 1 }
       },
+      "title_label" : "",
       "auto_title_pattern" : "",
       "render_title" : 0,
       "allow_status" : 0,
       "purge" : 0,
       "no_multiple" : 0,
-      "require_instance" : 0,
-      "title_label" : ""
+      "require_instance" : 0
     },
     "rdf_mapping" : [],
     "public" : true
@@ -118,6 +115,9 @@ function page_content_default_asset_type() {
  */
 function page_content_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
+  if ($module == "linkit" && $api == "linkit_profiles") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
