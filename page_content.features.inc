@@ -25,7 +25,9 @@ function page_content_default_asset_type() {
       "instance_info" : 0,
       "purge" : 0,
       "no_multiple" : 0,
-      "require_instance" : 0
+      "require_instance" : 0,
+      "viewable" : 0,
+      "pathauto" : 0
     },
     "rdf_mapping" : [],
     "public" : false
@@ -37,10 +39,10 @@ function page_content_default_asset_type() {
     "data" : {
       "icon" : "photo",
       "path" : "admin\\/media\\/image",
-      "auto_title" : 1,
       "usage_info" : 1,
       "instance_info" : 1,
       "widget" : {
+        "assetWidgetPosition" : { "status" : 1 },
         "assetWidgetImageStyle" : {
           "status" : 1,
           "settings" : {
@@ -49,11 +51,13 @@ function page_content_default_asset_type() {
             "content_quarter" : "Quarter Width"
           }
         },
-        "assetWidgetPosition" : { "status" : 1 },
         "assetWidgetLink" : { "status" : 1 },
         "assetWidgetCaption" : { "status" : 1 }
       },
+      "viewable" : 0,
+      "pathauto" : 0,
       "title_label" : "",
+      "auto_title" : 0,
       "auto_title_pattern" : "",
       "render_title" : 0,
       "allow_status" : 0,
@@ -80,7 +84,9 @@ function page_content_default_asset_type() {
       "purge" : 0,
       "no_multiple" : 0,
       "require_instance" : 0,
-      "title_label" : ""
+      "title_label" : "",
+      "viewable" : 0,
+      "pathauto" : 0
     },
     "rdf_mapping" : [],
     "public" : false
@@ -102,7 +108,9 @@ function page_content_default_asset_type() {
       "purge" : 0,
       "no_multiple" : 0,
       "require_instance" : 0,
-      "title_label" : ""
+      "title_label" : "",
+      "viewable" : 0,
+      "pathauto" : 0
     },
     "rdf_mapping" : [],
     "public" : false
