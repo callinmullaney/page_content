@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function page_content_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function page_content_field_group_info() {
       ),
     ),
   );
-  $export['group_attachments|node|dvsdvswv|form'] = $field_group;
+  $field_groups['group_attachments|node|dvsdvswv|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -64,7 +64,7 @@ function page_content_field_group_info() {
       ),
     ),
   );
-  $export['group_content|node|dvsdvswv|form'] = $field_group;
+  $field_groups['group_content|node|dvsdvswv|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -92,7 +92,7 @@ function page_content_field_group_info() {
       ),
     ),
   );
-  $export['group_imagery|node|dvsdvswv|form'] = $field_group;
+  $field_groups['group_imagery|node|dvsdvswv|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -120,7 +120,14 @@ function page_content_field_group_info() {
       ),
     ),
   );
-  $export['group_meta|node|page|form'] = $field_group;
+  $field_groups['group_meta|node|page|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Attachments');
+  t('Imagery');
+  t('Meta Tags');
+  t('Page Content');
+
+  return $field_groups;
 }

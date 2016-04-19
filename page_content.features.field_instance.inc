@@ -10,7 +10,7 @@
 function page_content_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'asset-file-field_file'
+  // Exported field_instance: 'asset-file-field_file'.
   $field_instances['asset-file-field_file'] = array(
     'bundle' => 'file',
     'deleted' => 0,
@@ -68,7 +68,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-image-field_image'
+  // Exported field_instance: 'asset-image-field_image'.
   $field_instances['asset-image-field_image'] = array(
     'bundle' => 'image',
     'deleted' => 0,
@@ -123,6 +123,18 @@ function page_content_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
+        'manualcrop_crop_info' => TRUE,
+        'manualcrop_default_crop_area' => TRUE,
+        'manualcrop_enable' => FALSE,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => TRUE,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => FALSE,
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -131,7 +143,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-slide-field_image_asset'
+  // Exported field_instance: 'asset-slide-field_image_asset'.
   $field_instances['asset-slide-field_image_asset'] = array(
     'bundle' => 'slide',
     'deleted' => 0,
@@ -175,7 +187,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-slide-field_link'
+  // Exported field_instance: 'asset-slide-field_link'.
   $field_instances['asset-slide-field_link'] = array(
     'bundle' => 'slide',
     'default_value' => NULL,
@@ -226,7 +238,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-slide-field_textarea'
+  // Exported field_instance: 'asset-slide-field_textarea'.
   $field_instances['asset-slide-field_textarea'] = array(
     'bundle' => 'slide',
     'default_value' => NULL,
@@ -264,7 +276,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'asset-video-field_video'
+  // Exported field_instance: 'asset-video-field_video'.
   $field_instances['asset-video-field_video'] = array(
     'bundle' => 'video',
     'default_value' => NULL,
@@ -305,7 +317,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -376,7 +388,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_file_assets'
+  // Exported field_instance: 'node-page-field_file_assets'.
   $field_instances['node-page-field_file_assets'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -426,7 +438,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_image_assets'
+  // Exported field_instance: 'node-page-field_image_assets'.
   $field_instances['node-page-field_image_assets'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -477,7 +489,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_meta_description'
+  // Exported field_instance: 'node-page-field_meta_description'.
   $field_instances['node-page-field_meta_description'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -514,7 +526,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_meta_keywords'
+  // Exported field_instance: 'node-page-field_meta_keywords'.
   $field_instances['node-page-field_meta_keywords'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -551,7 +563,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_slide_assets'
+  // Exported field_instance: 'node-page-field_slide_assets'.
   $field_instances['node-page-field_slide_assets'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -602,7 +614,7 @@ function page_content_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_video_assets'
+  // Exported field_instance: 'node-page-field_video_assets'.
   $field_instances['node-page-field_video_assets'] = array(
     'bundle' => 'page',
     'deleted' => 0,

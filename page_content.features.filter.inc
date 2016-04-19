@@ -25,15 +25,23 @@ function page_content_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'filter_autop' => array(
-        'weight' => 1,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_htmlcorrector' => array(
         'weight' => 10,
         'status' => 1,
         'settings' => array(),
+      ),
+      'pathologic' => array(
+        'weight' => 50,
+        'status' => 1,
+        'settings' => array(
+          'settings_source' => 'global',
+          'local_paths' => '',
+          'protocol_style' => 'full',
+          'local_settings' => array(
+            'protocol_style' => 'full',
+            'local_paths' => '',
+          ),
+        ),
       ),
     ),
   );
